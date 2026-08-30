@@ -42,4 +42,16 @@
      <img width="408" height="708" alt="image" src="https://github.com/user-attachments/assets/70b70bb4-af65-4f8b-80d1-038c42ef26bc" />
 
 
-3. 
+
+2. ambah 2 baris data buku baru di buku/list.html dengan meng-copy satu blok <tr>...</tr> lalu mengganti isinya
+
+   Kode yang ditambah di program :
+
+   
+   <img width="402" height="397" alt="image" src="https://github.com/user-attachments/assets/2362c547-eecc-4703-905d-e1287152d171" />
+
+
+   Hasil :
+
+
+   <img width="700" height="637" alt="image" src="https://github.com/user-attachments/assets/d6fcbad9-2024-418e-970a-b2c3a7844b4c" />

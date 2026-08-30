@@ -8,6 +8,7 @@
 
 1. Lengkapi konsistensi menu — tambahkan tautan "Daftar Anggota" dan "Tambah Anggota" ke menu <nav> di index.html, buku/list.html, dan buku/tambah.html (lihat
    catatan di dokumentasi anggota/list.html §5.4).
+
    Kode yang ditambah di program :
    
    - index.html

@@ -41,6 +41,12 @@
 
    <img width="425" height="642" alt="image" src="https://github.com/user-attachments/assets/76932236-6864-49bc-bfed-21e0050d40e5" />
 
+   Penjelasan :
+
+   <img width="421" height="637" alt="image" src="https://github.com/user-attachments/assets/0deb6b6d-5de5-480c-94e5-be33eef1b0f5" />
+
+   <img width="332" height="612" alt="image" src="https://github.com/user-attachments/assets/8c679c96-7674-4096-a5e7-2df291d509b6" />
+
 
    Hasil :
    - Daftar Anggota

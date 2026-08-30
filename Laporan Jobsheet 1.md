@@ -69,3 +69,18 @@
 
 
    <img width="716" height="157" alt="image" src="https://github.com/user-attachments/assets/47025491-9560-4c19-88ce-09e86b64c42c" />
+
+
+4. Tambah field baru di form tambah anggota, misalnya "Email" memakai <input type="email"> (type="email" otomatis memvalidasi format alamat email tanpa perlu
+   JavaScript tambahan).
+
+   Kode yang ditambah di program :
+
+   
+   <img width="447" height="222" alt="image" src="https://github.com/user-attachments/assets/d08ff4d7-f2df-4109-a14d-acba5c591766" />
+
+
+   Hasil :
+
+
+   <img width="410" height="686" alt="image" src="https://github.com/user-attachments/assets/accf055b-34a0-4c15-86a0-19ca221f80e2" />

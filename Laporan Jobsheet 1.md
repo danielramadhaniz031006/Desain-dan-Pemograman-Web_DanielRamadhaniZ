@@ -16,12 +16,6 @@
      
    <img width="645" height="215" alt="image" src="https://github.com/user-attachments/assets/049042a0-7cf5-4095-9270-b86bdedf68bd" />
 
-      Penjelasan :
-   
-   <img width="760" height="361" alt="image" src="https://github.com/user-attachments/assets/7fff08f8-d94f-4f44-8f83-d542b78ddda9" />
-
-
-
 
    - buku/list.html
   
@@ -33,6 +27,11 @@
   
      
    <img width="677" height="216" alt="image" src="https://github.com/user-attachments/assets/373450fb-5125-49c7-b9b3-5f8d41d4b841" />
+
+
+  Penjelasan :
+   
+   <img width="760" height="361" alt="image" src="https://github.com/user-attachments/assets/7fff08f8-d94f-4f44-8f83-d542b78ddda9" />
 
 
    Hasil :

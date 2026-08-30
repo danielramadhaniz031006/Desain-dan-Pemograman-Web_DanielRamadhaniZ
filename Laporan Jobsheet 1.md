@@ -106,6 +106,10 @@
    
    <img width="447" height="222" alt="image" src="https://github.com/user-attachments/assets/d08ff4d7-f2df-4109-a14d-acba5c591766" />
 
+   Penjelasan :
+   
+   <img width="600" height="645" alt="image" src="https://github.com/user-attachments/assets/f7002394-f333-4631-a9a2-82dab623a96a" />
+
 
    Hasil :
 

@@ -55,3 +55,17 @@
 
 
    <img width="700" height="637" alt="image" src="https://github.com/user-attachments/assets/d6fcbad9-2024-418e-970a-b2c3a7844b4c" />
+
+
+3. Tambah kolom baru di tabel anggota, misalnya "Tanggal Bergabung", lengkap dengan <th> dan <td>-nya di setiap baris.
+
+   Kode yang ditambah di program :
+
+   
+   <img width="390" height="625" alt="image" src="https://github.com/user-attachments/assets/aeefa7cc-5aab-41a1-afa0-ff116a31a7a6" />
+
+
+   Hasil :
+
+
+   <img width="716" height="157" alt="image" src="https://github.com/user-attachments/assets/47025491-9560-4c19-88ce-09e86b64c42c" />

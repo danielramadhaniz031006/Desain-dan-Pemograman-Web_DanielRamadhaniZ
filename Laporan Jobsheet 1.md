@@ -28,7 +28,8 @@
 
    Penjelasan :
 
-   <img width="701" height="472" alt="image" src="https://github.com/user-attachments/assets/8d5ec88c-953a-437b-8ac2-1a8204dab769" />
+   <img width="700" height="362" alt="image" src="https://github.com/user-attachments/assets/f747c9ec-a671-4e64-bb11-c764bb1a7356" />
+
 
    
    - buku/tambah.html

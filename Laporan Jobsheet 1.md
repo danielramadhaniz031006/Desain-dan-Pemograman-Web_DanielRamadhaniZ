@@ -77,6 +77,14 @@
    
    <img width="390" height="625" alt="image" src="https://github.com/user-attachments/assets/aeefa7cc-5aab-41a1-afa0-ff116a31a7a6" />
 
+   Penjelasan :
+
+   <img width="445" height="635" alt="image" src="https://github.com/user-attachments/assets/59d57ced-c4c1-4014-bcf3-38dd5fcc0a7c" />
+
+   <img width="313" height="661" alt="image" src="https://github.com/user-attachments/assets/85ab37ea-f3f7-4ed0-81e0-2c38e7f86779" />
+
+   <img width="305" height="662" alt="image" src="https://github.com/user-attachments/assets/dd3567d0-8035-4ff0-b389-1916c6c700dd" />
+
 
    Hasil :
 
@@ -84,7 +92,7 @@
    <img width="716" height="157" alt="image" src="https://github.com/user-attachments/assets/47025491-9560-4c19-88ce-09e86b64c42c" />
 
 
-5. Tambah field baru di form tambah anggota, misalnya "Email" memakai <input type="email"> (type="email" otomatis memvalidasi format alamat email tanpa perlu
+6. Tambah field baru di form tambah anggota, misalnya "Email" memakai <input type="email"> (type="email" otomatis memvalidasi format alamat email tanpa perlu
    JavaScript tambahan).
 
    Kode yang ditambah di program :

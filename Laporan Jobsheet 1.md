@@ -79,7 +79,7 @@
 
    Penjelasan :
 
-   Bagian <table>
+   Bagian table
    
    <img width="445" height="635" alt="image" src="https://github.com/user-attachments/assets/59d57ced-c4c1-4014-bcf3-38dd5fcc0a7c" />
 

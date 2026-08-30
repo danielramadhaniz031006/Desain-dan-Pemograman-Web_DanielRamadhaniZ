@@ -37,6 +37,9 @@
      
    <img width="677" height="216" alt="image" src="https://github.com/user-attachments/assets/373450fb-5125-49c7-b9b3-5f8d41d4b841" />
 
+   Penjelasan :
+
+   <img width="425" height="642" alt="image" src="https://github.com/user-attachments/assets/76932236-6864-49bc-bfed-21e0050d40e5" />
 
 
    Hasil :

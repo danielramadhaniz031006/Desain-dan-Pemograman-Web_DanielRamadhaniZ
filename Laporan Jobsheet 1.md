@@ -17,20 +17,10 @@
    <img width="645" height="215" alt="image" src="https://github.com/user-attachments/assets/049042a0-7cf5-4095-9270-b86bdedf68bd" />
 
    Penjelasan :
-                           <li><a href="index.html">Beranda</a></li>
-                           → Menu Beranda. Karena index.html berada di folder utama, langsung menggunakan index.html.
-                              
-                           <li><a href="buku/list.html">Daftar Buku</a></li>
-                           → Menu Daftar Buku. Masuk ke folder buku, lalu membuka list.html.
-                                 
-                           <li><a href="buku/tambah.html">Tambah Buku</a></li>
-                           → Menu Tambah Buku. Masuk ke folder buku, lalu membuka tambah.html.
-                                 
-                           <li><a href="anggota/list.html">Daftar Anggota</a></li>
-                           → Menu Daftar Anggota. Masuk ke folder anggota, lalu membuka list.html.
-                                 
-                           <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
-                           → Ini yang ditambahkan. Menu menuju halaman tambah anggota.
+   
+   <img width="760" height="361" alt="image" src="https://github.com/user-attachments/assets/7fff08f8-d94f-4f44-8f83-d542b78ddda9" />
+
+
 
    - buku/list.html
   

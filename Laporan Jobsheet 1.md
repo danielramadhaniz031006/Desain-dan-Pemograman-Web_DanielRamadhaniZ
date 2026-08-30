@@ -26,6 +26,10 @@
      
    <img width="660" height="217" alt="image" src="https://github.com/user-attachments/assets/10b6aec1-e2a9-427e-a8dc-939a4e1a6cfd" />
 
+   Penjelasan :
+
+   <img width="701" height="472" alt="image" src="https://github.com/user-attachments/assets/8d5ec88c-953a-437b-8ac2-1a8204dab769" />
+
    
    - buku/tambah.html
   

@@ -3,7 +3,7 @@
 | NIM | 254107020255 |
 | Nama | Daniel Ramadhani Zulkarnain |
 | Kelas | TI - 2D |
-| Repository | [link] () |
+| Repository | [link] (https://github.com/danielramadhaniz031006/Desain-dan-Pemograman-Web_DanielRamadhaniZ/tree/6bf4fa0db7838327fb5b1ac5882886e1f8a765b5/jobsheet-02) |
 
 
 1. Ubah skema warna — ganti nilai #1d5b8a (warna biru tema) di seluruh file style.css dengan warna lain, misalnya hijau tua, lalu amati bagaimana warna itu konsisten muncul di header, judul section, tombol submit, dan header tabel — karena semuanya memakai nilai hex yang sama.

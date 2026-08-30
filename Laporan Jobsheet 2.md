@@ -35,3 +35,8 @@ Hasil :
 3. Buat tombol ketiga di tabel — tambahkan tombol "Detail" di antara Edit dan Hapus pada buku/list.html, lalu amati apakah warnanya sesuai harapan (ingat catatan di bab 7 §7.6 tentang :first-of-type/:last-of-type yang berbasis posisi, bukan makna). Coba perbaiki dengan memberi class khusus jika warnanya tidak sesuai.
 
 <img width="1917" height="888" alt="image" src="https://github.com/user-attachments/assets/ca669600-cade-4e7a-a211-1e55bf597a3b" />
+
+4.Uji responsivitas sederhana — perkecil lebar jendela browser secara bertahap sampai sangat sempit (seperti lebar HP), amati kapan flex-wrap: wrap pada navbar mulai memindahkan menu ke baris baru.
+
+<img width="1900" height="885" alt="image" src="https://github.com/user-attachments/assets/99f2cabd-4533-4e19-b389-cadeaf6b9e95" />
+

@@ -50,19 +50,19 @@
      
      <img width="408" height="708" alt="image" src="https://github.com/user-attachments/assets/70b70bb4-af65-4f8b-80d1-038c42ef26bc" />
 
-   Penjelasan :
 
-   <img width="421" height="637" alt="image" src="https://github.com/user-attachments/assets/0deb6b6d-5de5-480c-94e5-be33eef1b0f5" />
-
-   <img width="332" height="612" alt="image" src="https://github.com/user-attachments/assets/8c679c96-7674-4096-a5e7-2df291d509b6" />
-
-3. ambah 2 baris data buku baru di buku/list.html dengan meng-copy satu blok <tr>...</tr> lalu mengganti isinya
+3. Tambah 2 baris data buku baru di buku/list.html dengan meng-copy satu blok <tr>...</tr> lalu mengganti isinya
 
    Kode yang ditambah di program :
 
    
    <img width="402" height="397" alt="image" src="https://github.com/user-attachments/assets/2362c547-eecc-4703-905d-e1287152d171" />
 
+   Penjelasan :
+
+   <img width="421" height="637" alt="image" src="https://github.com/user-attachments/assets/0deb6b6d-5de5-480c-94e5-be33eef1b0f5" />
+
+   <img width="332" height="612" alt="image" src="https://github.com/user-attachments/assets/8c679c96-7674-4096-a5e7-2df291d509b6" />
 
    Hasil :
 

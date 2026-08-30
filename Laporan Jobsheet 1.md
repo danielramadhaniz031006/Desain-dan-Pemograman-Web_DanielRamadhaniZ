@@ -13,7 +13,6 @@
    
    - index.html
   
-     
    <img width="645" height="215" alt="image" src="https://github.com/user-attachments/assets/049042a0-7cf5-4095-9270-b86bdedf68bd" />
 
      Penjelasan :
@@ -22,8 +21,7 @@
 
 
    - buku/list.html
-  
-     
+      
    <img width="660" height="217" alt="image" src="https://github.com/user-attachments/assets/10b6aec1-e2a9-427e-a8dc-939a4e1a6cfd" />
 
    Penjelasan :
@@ -31,7 +29,6 @@
    <img width="700" height="362" alt="image" src="https://github.com/user-attachments/assets/f747c9ec-a671-4e64-bb11-c764bb1a7356" />
 
 
-   
    - buku/tambah.html
   
      
@@ -40,13 +37,6 @@
    Penjelasan :
 
    <img width="425" height="642" alt="image" src="https://github.com/user-attachments/assets/76932236-6864-49bc-bfed-21e0050d40e5" />
-
-   Penjelasan :
-
-   <img width="421" height="637" alt="image" src="https://github.com/user-attachments/assets/0deb6b6d-5de5-480c-94e5-be33eef1b0f5" />
-
-   <img width="332" height="612" alt="image" src="https://github.com/user-attachments/assets/8c679c96-7674-4096-a5e7-2df291d509b6" />
-
 
    Hasil :
    - Daftar Anggota
@@ -60,7 +50,11 @@
      
      <img width="408" height="708" alt="image" src="https://github.com/user-attachments/assets/70b70bb4-af65-4f8b-80d1-038c42ef26bc" />
 
+   Penjelasan :
 
+   <img width="421" height="637" alt="image" src="https://github.com/user-attachments/assets/0deb6b6d-5de5-480c-94e5-be33eef1b0f5" />
+
+   <img width="332" height="612" alt="image" src="https://github.com/user-attachments/assets/8c679c96-7674-4096-a5e7-2df291d509b6" />
 
 3. ambah 2 baris data buku baru di buku/list.html dengan meng-copy satu blok <tr>...</tr> lalu mengganti isinya
 

@@ -40,3 +40,31 @@
 
 - Hasil
 <img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/9b969c9d-57b1-4ad8-a2c5-d7e587287284" />
+
+
+4. Ubah posisi ikon hamburger — misalnya pindahkan .nav-toggle-label ke urutan terakhir di <header> (setelah <nav>) lalu amati apakah sibling combinator .nav-toggle:checked ~ nav di bab 3 §3.5 masih bekerja — ingat catatan bahwa combinator ~ mensyaratkan target berada setelah elemen sumbernya di HTML.
+
+- Kode
+<img width="687" height="391" alt="image" src="https://github.com/user-attachments/assets/95e46897-71d4-451e-8456-f10f149fd25a" />
+  
+- Penjelasan
+<img width="862" height="722" alt="image" src="https://github.com/user-attachments/assets/7dbc48ec-fc92-4218-a329-86817cd4a863" />
+
+- Hasil
+<img width="1917" height="891" alt="image" src="https://github.com/user-attachments/assets/ace196b5-02c2-4283-b712-9473eb888673" />
+
+
+5. Bandingkan dengan pendekatan mobile-first — coba tulis ulang style.css dari nol memakai @media (min-width: ...) alih-alih max-width, dan rasakan sendiri bedanya alur berpikirnya.
+- Kode
+<img width="702" height="476" alt="image" src="https://github.com/user-attachments/assets/0879945a-d756-4d2f-aea5-2adffb7dd51e" />
+
+
+- Penjelasan
+<img width="617" height="666" alt="image" src="https://github.com/user-attachments/assets/4563fba4-3e36-41ba-ac6a-1321dc97d42f" />
+
+- Hasil
+  Tampilan Desktop
+<img width="1917" height="907" alt="image" src="https://github.com/user-attachments/assets/06ffb3f4-d672-4ff5-8079-5c06129c8d20" />
+
+   Tampilan Mobile
+<img width="720" height="1600" alt="WhatsApp Image 2026-09-06 at 13 40 50" src="https://github.com/user-attachments/assets/f8ec9f4d-6c10-4cb2-9c0d-af783dc24a56" />

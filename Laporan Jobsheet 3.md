@@ -66,5 +66,7 @@
   Tampilan Desktop
 <img width="1917" height="907" alt="image" src="https://github.com/user-attachments/assets/06ffb3f4-d672-4ff5-8079-5c06129c8d20" />
 
-   Tampilan Mobile
+
+  Tampilan Mobile
+  
 <img width="720" height="1600" alt="WhatsApp Image 2026-09-06 at 13 40 50" src="https://github.com/user-attachments/assets/f8ec9f4d-6c10-4cb2-9c0d-af783dc24a56" />

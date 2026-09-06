@@ -32,7 +32,7 @@
 
 
 3. Terapkan pola table-responsive ke elemen lain yang berpotensi melebar di layar sempit, misalnya kalau suatu saat kamu menambahkan blok kode <pre> yang panjang
-   di salah satu halaman.
+di salah satu halaman.
 - Kode
 <img width="366" height="128" alt="image" src="https://github.com/user-attachments/assets/5f5c3c71-7e7e-4913-960c-ee1ef6aff143" />
   

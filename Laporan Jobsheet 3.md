@@ -8,4 +8,5 @@
 
 1. Tambah breakpoint baru — misalnya @media (min-width: 1400px) untuk layar monitor sangat lebar, ubah main { max-width: 1000px; } (dari dokumentasi jobsheet-02)
    menjadi lebih lebar khusus di breakpoint ini.
-<img width="342" height="297" alt="image" src="https://github.com/user-attachments/assets/b038da38-f932-4fa3-ad6b-c66a2ec6ca83" />
+<img width="1917" height="1078" alt="image" src="https://github.com/user-attachments/assets/4279deff-f0bd-443c-b8e2-47ce8495639b" />
+

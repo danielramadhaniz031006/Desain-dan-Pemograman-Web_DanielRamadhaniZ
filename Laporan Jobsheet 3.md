@@ -31,8 +31,7 @@
 <img width="1917" height="905" alt="image" src="https://github.com/user-attachments/assets/3a923ccf-2134-4163-94ce-5d0127e31dd0" />
 
 
-3. Terapkan pola table-responsive ke elemen lain yang berpotensi melebar di layar sempit, misalnya kalau suatu saat kamu menambahkan blok kode <pre> yang panjang
-di salah satu halaman.
+3. Terapkan pola table-responsive ke elemen lain yang berpotensi melebar di layar sempit, misalnya kalau suatu saat kamu menambahkan blok kode <pre> yang panjangdi salah satu halaman.
 - Kode
 <img width="366" height="128" alt="image" src="https://github.com/user-attachments/assets/5f5c3c71-7e7e-4913-960c-ee1ef6aff143" />
   

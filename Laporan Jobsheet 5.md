@@ -21,7 +21,8 @@ Menambahkan validasi pada field **ISBN** di form **Tambah Buku**. Field ISBN seb
 
 ### Hasil
 
-<img width="1917" height="911" alt="Hasil Validasi ISBN" src="https://github.com/user-attachments/assets/810cbafd-bfad-435e-9dc5-9604d44809db" />
+<img width="1917" height="911" alt="Screenshot 2026-09-09 071201" src="https://github.com/user-attachments/assets/5171e061-2c9d-41a0-bbf1-bc145d4d0075" />
+
 
 <br>
 <br>

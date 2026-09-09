@@ -23,6 +23,7 @@ Hasil :
 
 
 
+
 2. Tambah animasi sederhana pada initNavToggle — misalnya tambahkan class CSS transition pada header nav di style.css supaya menu terbuka/tertutup dengan efek geser halus, alih-alih langsung muncul/hilang seketika
 
 Kode :

@@ -20,10 +20,7 @@ Penjelasan :
 Hasil :
 
 <img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/810cbafd-fbad-435e-9dc5-9604d44809db" />
-
-
-
-
+<br>
 2. Tambah animasi sederhana pada initNavToggle — misalnya tambahkan class CSS transition pada header nav di style.css supaya menu terbuka/tertutup dengan efek geser halus, alih-alih langsung muncul/hilang seketika
 
 Kode :

@@ -30,7 +30,7 @@ Menambahkan validasi pada field ISBN di form **Tambah Buku**. Field ISBN sebelum
 
 ## 2. Tambah Animasi Sederhana pada `initNavToggle`
 
-Menambahkan animasi sederhana pada menu navigasi dengan menggunakan class CSS `transition` pada `header nav` di `style.css`, sehingga menu dapat terbuka dan tertutup dengan efek geser yang lebih halus, bukan langsung muncul atau menghilang.
+Menambahkan animasi sederhana pada menu navigasi dengan menggunakan class CSS `transition` pada `header nav` di `style.css`, sehingga menu dapat terbuka dan tertutup dengan efek yang lebih halus, bukan langsung muncul atau menghilang.
 
 ### Kode
 
@@ -53,3 +53,64 @@ Menambahkan animasi sederhana pada menu navigasi dengan menggunakan class CSS `t
 ### Hasil
 
 <img width="1917" height="913" alt="Hasil Animasi Menu" src="https://github.com/user-attachments/assets/2e787bcb-cefd-4220-9f4e-70c8d83d2c93" />
+
+<br>
+<br>
+
+---
+
+## 3. Perluas `initTableFilter`
+
+Memperluas fungsi `initTableFilter` agar pencarian dapat dibatasi hanya pada satu kolom, yaitu kolom **Judul**, bukan mencari pada seluruh teks dalam baris. Perubahan dilakukan dengan menggunakan `row.querySelector("td")` untuk mengambil kolom pertama pada setiap baris.
+
+### Kode
+
+<img width="690" height="320" alt="Kode Filter Berdasarkan Judul" src="https://github.com/user-attachments/assets/2540bb95-0ceb-4a24-869c-c1693a43e460" />
+
+### Penjelasan
+
+<img width="1352" height="457" alt="Penjelasan Filter Berdasarkan Judul" src="https://github.com/user-attachments/assets/86c6bd70-9cb8-4860-90b4-05e86442a203" />
+
+### Hasil
+
+<img width="1916" height="908" alt="Hasil Filter Judul" src="https://github.com/user-attachments/assets/be45b1f1-4903-449c-baff-1d324402973d" />
+
+<img width="1917" height="917" alt="Hasil Filter Judul" src="https://github.com/user-attachments/assets/b333cd59-5204-448f-a848-651c9b7f7da4" />
+
+<br>
+<br>
+
+---
+
+## 4. Tambah Counter Jumlah Baris Tersisa
+
+Menambahkan counter jumlah buku yang masih ditampilkan setelah proses filter atau penghapusan. Counter menampilkan informasi seperti **"Menampilkan 3 dari 5 buku"** dan diperbarui setiap kali proses filter atau hapus dilakukan.
+
+### Kode
+
+**Fungsi Counter**
+
+<img width="712" height="472" alt="Fungsi Counter" src="https://github.com/user-attachments/assets/f6a0202f-2584-43dc-8c16-e4ad8c17ccbb" />
+
+**Setelah Filter**
+
+<img width="395" height="66" alt="Update Counter Setelah Filter" src="https://github.com/user-attachments/assets/fb938486-4fe5-4b12-b796-69a131175424" />
+
+**Setelah Hapus**
+
+<img width="487" height="127" alt="Update Counter Setelah Hapus" src="https://github.com/user-attachments/assets/3639cde4-a089-491a-b7cf-6a51f180fad8" />
+
+**HTML**
+
+<img width="537" height="37" alt="HTML Counter" src="https://github.com/user-attachments/assets/d0d2d63e-7f43-4d71-8c27-aef2e5114cc6" />
+
+### Penjelasan
+
+**Fungsi Counter**
+
+<img width="702" height="685" alt="Penjelasan Fungsi Counter" src="https://github.com/user-attachments/assets/d0305590-0595-4f45-9502-a7d5c6bb023d" />
+
+**Setelah Filter**
+
+```javascript
+updateTableCounter(table);

@@ -113,7 +113,7 @@ Hal ini dilakukan dengan membandingkan dengan versi `buku/proses_tambah.php` yan
 
 ### Kode Validasi No. HP
 
-![Validasi No HP](https://github.com/user-attachments/assets/0a630b7e-77d4-4bfd-a57f-5f36764507b0)
+<img width="646" height="246" alt="image" src="https://github.com/user-attachments/assets/c7957b77-522d-4d85-8091-c1f1143f7f25" />
 
 ```php
 if ($noHp !== '' && !preg_match('/^[0-9]+$/', $noHp)) {

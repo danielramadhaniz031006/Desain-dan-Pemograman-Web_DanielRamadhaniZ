@@ -5,7 +5,7 @@
 | **NIM** | 254107020255 |
 | **Nama** | Daniel Ramadhani Zulkarnain |
 | **Kelas** | TI - 2D |
-| **Repository** | () |
+| **Repository** | (https://github.com/danielramadhaniz031006/Desain-dan-Pemograman-Web_DanielRamadhaniZ/tree/5bcada813548d11e1446610e0428e3b51c8c295c/jobsheet-08) |
 
 ---
 

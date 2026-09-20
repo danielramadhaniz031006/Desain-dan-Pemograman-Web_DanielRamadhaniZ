@@ -334,3 +334,42 @@ foreach ($_SESSION['anggota'] as $anggota) {
 ![Hasil No Anggota Duplikat](https://github.com/user-attachments/assets/be8b4cbf-6f0a-4e59-8daa-29d642bb58b4)
 
 ---
+
+## 3. Debug Session
+
+Buat halaman debug_session.php sementara (untuk latihan, hapus setelah selesai) yang menampilkan isi $_SESSION mentah lewat <pre><?php print_r($_SESSION); ?></pre> — cara yang berguna untuk "mengintip" langsung apa yang sebenarnya tersimpan di server saat belajar.
+
+### Kode
+
+```php
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Debug Session</title>
+</head>
+<body>
+
+<h2>Isi Session</h2>
+
+<pre><?php print_r($_SESSION); ?></pre>
+
+</body>
+</html>
+```
+
+### Penjelasan
+
+- `session_start();` digunakan untuk memulai dan mengakses session PHP.
+- `<h2>Isi Session</h2>` digunakan untuk menampilkan judul halaman.
+- `<pre>` digunakan agar isi session ditampilkan dengan format yang lebih mudah dibaca.
+- `print_r($_SESSION);` digunakan untuk menampilkan seluruh isi `$_SESSION` yang sedang tersimpan.
+- `</pre>` digunakan untuk menutup area tampilan data session.
+
+### Hasil
+
+<img width="638" height="542" alt="image" src="https://github.com/user-attachments/assets/1de26dd7-e756-44b2-8cb4-77a01b52d675" />

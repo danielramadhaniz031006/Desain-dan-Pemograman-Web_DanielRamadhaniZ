@@ -231,3 +231,110 @@ File `buku/proses_tambah.php` tidak perlu mengisi `tanggal_ditambahkan` secara m
 
 <img width="1297" height="330" alt="image" src="https://github.com/user-attachments/assets/e2470812-31ed-45e3-99a2-ed3efb7ece8c" />
 
+
+## 3. Membuat Query Pencarian di Server
+
+Buat query pencarian di server — tambahkan WHERE judul ILIKE :keyword (ILIKE = pencocokan teks tanpa memandang huruf besar/kecil di PostgreSQL) ke query SELECT di buku/list.php, dihubungkan dengan kolom pencarian yang sudah ada di HTML — bandingkan dengan filter tabel sisi klien yang sudah kamu bangun di dokumentasi jobsheet-05 §6.
+
+### Kode
+
+    $keyword = trim($_GET['keyword'] ?? '');
+
+    $stmt = $pdo->prepare(
+        "SELECT *
+         FROM buku
+         WHERE judul ILIKE :keyword
+         ORDER BY id DESC"
+    );
+
+    $stmt->execute([
+        'keyword' => '%' . $keyword . '%'
+    ]);
+
+    $daftarBuku = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+### Penjelasan Tiap Baris Kode
+
+**`$keyword = trim($_GET['keyword'] ?? '');`**
+
+Mengambil nilai pencarian dari parameter `keyword` pada URL. Fungsi `trim()` digunakan untuk menghilangkan spasi yang tidak diperlukan pada awal dan akhir kata pencarian.
+
+**`$stmt = $pdo->prepare(`**
+
+Mempersiapkan query SQL menggunakan PDO agar query dapat dijalankan dengan parameter.
+
+**`"SELECT *`**
+
+Mengambil seluruh kolom data dari tabel `buku`.
+
+**`FROM buku`**
+
+Menentukan bahwa data yang dicari berasal dari tabel `buku`.
+
+**`WHERE judul ILIKE :keyword`**
+
+Menyaring data berdasarkan kolom `judul`. Operator `ILIKE` digunakan untuk pencarian yang tidak membedakan huruf besar dan huruf kecil.
+
+**`ORDER BY id DESC`**
+
+Mengurutkan data berdasarkan `id` dari yang terbesar ke yang terkecil, sehingga data terbaru ditampilkan lebih dahulu.
+
+**`$stmt->execute([`**
+
+Menjalankan query yang sudah dipersiapkan sebelumnya.
+
+**`'keyword' => '%' . $keyword . '%'`**
+
+Mengisi parameter `:keyword` dengan kata pencarian. Tanda `%` digunakan agar pencarian dapat menemukan kata yang berada di bagian mana pun dari judul.
+
+Contohnya, jika pengguna mencari:
+
+    muay
+
+Maka judul seperti:
+
+    Basic Muay Thai
+
+tetap dapat ditemukan.
+
+**`$daftarBuku = $stmt->fetchAll(PDO::FETCH_ASSOC);`**
+
+Mengambil seluruh hasil pencarian dari database dan menyimpannya ke dalam variabel `$daftarBuku`.
+
+### Perubahan pada Kolom Pencarian
+
+Kolom pencarian pada `buku/list.php` menggunakan parameter `keyword`:
+
+    <input
+        type="text"
+        id="search-input"
+        name="keyword"
+        value="<?php echo htmlspecialchars($keyword); ?>"
+        placeholder="Ketik judul buku..."
+    >
+
+Atribut `name="keyword"` digunakan agar nilai yang dimasukkan pengguna dapat dikirim ke server melalui metode `GET`.
+
+Form pencarian menggunakan:
+
+    <form method="GET" action="list.php">
+
+Ketika tombol **Cari** ditekan, browser mengirimkan keyword ke `list.php`. PHP kemudian menggunakan keyword tersebut pada query `ILIKE`.
+
+### Perbandingan Server-Side dan Client-Side
+
+Sebelumnya, pencarian dilakukan di sisi klien menggunakan JavaScript. Fungsi `initTableFilter()` mengambil teks dari setiap baris tabel dan menyembunyikan baris yang tidak sesuai dengan keyword.
+
+Pada pencarian server-side, keyword dikirim ke PHP terlebih dahulu. PHP menjalankan query PostgreSQL menggunakan `WHERE judul ILIKE :keyword`, kemudian hanya data yang sesuai dengan pencarian yang dikembalikan dari database.
+
+**Client-side:**
+
+Pencarian dilakukan pada data yang sudah ada di halaman menggunakan JavaScript.
+
+**Server-side:**
+
+Pencarian dilakukan langsung pada database PostgreSQL menggunakan query SQL.
+
+### Hasil
+
+<img width="1917" height="497" alt="image" src="https://github.com/user-attachments/assets/97a7dd30-df4a-44f7-9f2e-ea9032f70dba" />

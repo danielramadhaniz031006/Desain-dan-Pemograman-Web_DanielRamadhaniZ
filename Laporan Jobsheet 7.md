@@ -337,9 +337,10 @@ foreach ($_SESSION['anggota'] as $anggota) {
 
 ## 3. Debug Session
 
-Buat halaman debug_session.php sementara (untuk latihan, hapus setelah selesai) yang menampilkan isi $_SESSION mentah lewat <pre><?php print_r($_SESSION); ?></pre> — cara yang berguna untuk "mengintip" langsung apa yang sebenarnya tersimpan di server saat belajar.
+Buat halaman `debug_session.php` sementara (untuk latihan, hapus setelah selesai) yang menampilkan isi `$_SESSION` mentah lewat `<pre><?php print_r($_SESSION); ?></pre>` — cara yang berguna untuk "mengintip" langsung apa yang sebenarnya tersimpan di server saat belajar.
 
 ### Kode
+
 ```php
 <?php
 session_start();

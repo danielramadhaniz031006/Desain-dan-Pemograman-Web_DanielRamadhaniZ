@@ -228,11 +228,6 @@ Mengubah format tanggal dan waktu agar lebih mudah dibaca. Format yang digunakan
 File `buku/proses_tambah.php` tidak perlu mengisi `tanggal_ditambahkan` secara manual. Proses `INSERT` tetap memasukkan data judul, pengarang, tahun, ISBN, stok, dan kategori. Karena kolom `tanggal_ditambahkan` memiliki `DEFAULT NOW()`, PostgreSQL akan mengisi tanggal dan waktu secara otomatis ketika buku ditambahkan.
 
 ### Hasil
+
 <img width="1297" height="330" alt="image" src="https://github.com/user-attachments/assets/e2470812-31ed-45e3-99a2-ed3efb7ece8c" />
 
-
-Pada halaman **Daftar Buku**, sekarang terdapat kolom baru:
-
-**Judul | Pengarang | Tahun | Stok | Tanggal Ditambahkan | Aksi**
-
-Setiap buku yang ditambahkan akan memiliki tanggal dan waktu penambahan secara otomatis.

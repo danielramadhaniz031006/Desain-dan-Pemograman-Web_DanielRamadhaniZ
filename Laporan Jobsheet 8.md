@@ -338,3 +338,68 @@ Pencarian dilakukan langsung pada database PostgreSQL menggunakan query SQL.
 ### Hasil
 
 <img width="1917" height="497" alt="image" src="https://github.com/user-attachments/assets/97a7dd30-df4a-44f7-9f2e-ea9032f70dba" />
+
+
+## 4. Migrasi Data Lama
+
+Migrasi data lama — coba tulis skrip PHP kecil terpisah yang membaca data/buku.json dari jobsheet-06 (dokumentasi jobsheet-06 §3) lalu memasukkan seluruh isinya ke tabel buku lewat INSERT — latihan bagus untuk memahami bagaimana data lama bisa "dipindahkan" ke database baru.
+
+### Penjelasan setiap baris kode
+
+1. `<?php`
+   Digunakan untuk menandai awal kode PHP.
+
+2. `require __DIR__ . '/includes/koneksi.php';`
+   Memanggil file `koneksi.php` agar program dapat terhubung ke database
+   melalui variabel `$pdo`.
+
+3. `$file = __DIR__ . '/data/buku.json';`
+   Menentukan lokasi file `buku.json` yang berisi data buku lama.
+
+4. `$data = json_decode(file_get_contents($file), true);`
+   Membaca isi file `buku.json`, kemudian mengubah data JSON menjadi array
+   PHP menggunakan `json_decode()`.
+
+5. `foreach ($data as $buku) {`
+   Melakukan perulangan untuk mengambil setiap data buku yang ada di
+   dalam file JSON.
+
+6. `$stmt = $pdo->prepare("...");`
+   Membuat perintah SQL `INSERT` yang akan digunakan untuk memasukkan data
+   ke tabel `buku`.
+
+7. `INSERT INTO buku (judul, pengarang, tahun, stok)`
+   Menentukan kolom tabel `buku` yang akan diisi.
+
+8. `VALUES (:judul, :pengarang, :tahun, :stok)`
+   Menentukan parameter yang nantinya akan diisi dengan data dari JSON.
+
+9. `$stmt->execute([...]);`
+   Menjalankan perintah `INSERT` dan mengirimkan nilai dari setiap data buku.
+
+10. `':judul' => $buku['judul']`
+    Mengambil nilai `judul` dari data JSON dan memasukkannya ke kolom
+    `judul`.
+
+11. `':pengarang' => $buku['pengarang']`
+    Mengambil nilai `pengarang` dari data JSON dan memasukkannya ke kolom
+    `pengarang`.
+
+12. `':tahun' => $buku['tahun']`
+    Mengambil nilai `tahun` dari data JSON dan memasukkannya ke kolom
+    `tahun`.
+
+13. `':stok' => $buku['stok']`
+    Mengambil nilai `stok` dari data JSON dan memasukkannya ke kolom
+    `stok`.
+
+14. `}`
+    Menutup proses perulangan `foreach`.
+
+15. `echo "Migrasi berhasil. Total data: " . count($data);`
+    Menampilkan pesan bahwa proses migrasi berhasil serta menampilkan
+    jumlah data buku yang telah diproses.
+
+### Hasil
+
+<img width="1320" height="916" alt="image" src="https://github.com/user-attachments/assets/f280cc01-7fb2-4242-84d5-d60a8d5053c7" />

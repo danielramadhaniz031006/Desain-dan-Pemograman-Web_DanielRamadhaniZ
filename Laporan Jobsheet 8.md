@@ -145,8 +145,94 @@ Menghentikan proses PHP setelah pengguna diarahkan kembali ke halaman tambah ang
 
 Jika pengguna memasukkan **No. Anggota yang sudah digunakan**, sistem tidak lagi menampilkan error PostgreSQL secara mentah.
 
+
+
+
 Sistem akan menampilkan pesan:
 
 **"No. Anggota sudah dipakai, gunakan nomor lain."**
 
 ![Hasil Penanganan Error UNIQUE](https://github.com/user-attachments/assets/1efc8ae0-5ee6-401a-b67c-f9f8689575b1)
+
+
+## 2. Menambahkan Kolom `tanggal_ditambahkan`
+
+Tambah kolom baru — misalnya tanggal_ditambahkan TIMESTAMP DEFAULT NOW() di tabel buku (cari tahu sendiri arti NOW() dan TIMESTAMP lewat dokumentasi PostgreSQL), lalu tampilkan kolom itu di buku/list.php.
+
+### Kode SQL
+
+    ALTER TABLE buku
+    ADD COLUMN IF NOT EXISTS tanggal_ditambahkan TIMESTAMP DEFAULT NOW();
+
+### Penjelasan Tiap Baris Kode
+
+**`ALTER TABLE buku`**
+
+Digunakan untuk mengubah struktur tabel `buku` yang sudah ada di database.
+
+**`ADD COLUMN IF NOT EXISTS tanggal_ditambahkan`**
+
+Digunakan untuk menambahkan kolom baru bernama `tanggal_ditambahkan`. Kata `IF NOT EXISTS` digunakan agar kolom tidak ditambahkan kembali jika kolom tersebut sudah tersedia.
+
+**`TIMESTAMP`**
+
+Digunakan sebagai tipe data untuk menyimpan tanggal dan waktu.
+
+**`DEFAULT NOW()`**
+
+Menentukan nilai bawaan kolom menggunakan waktu saat ini. Fungsi `NOW()` akan menghasilkan tanggal dan waktu ketika data dimasukkan ke dalam tabel.
+
+### Perubahan pada `buku/list.php`
+
+Sebelumnya, tabel daftar buku hanya menampilkan kolom Judul, Pengarang, Tahun, Stok, dan Aksi. Data buku diambil menggunakan query `SELECT * FROM buku ORDER BY id DESC`. 
+
+Kemudian ditambahkan kolom **Tanggal Ditambahkan** pada bagian tabel.
+
+Kode yang ditambahkan pada bagian `<thead>`:
+
+    <th>Tanggal Ditambahkan</th>
+
+Kode tersebut digunakan untuk membuat judul kolom baru pada tabel.
+
+Kemudian ditambahkan kode pada bagian `<tbody>`:
+
+    <td>
+        <?php
+        echo date(
+            'd-m-Y H:i',
+            strtotime($buku['tanggal_ditambahkan'])
+        );
+        ?>
+    </td>
+
+### Penjelasan Kode Tampilan Tanggal
+
+**`<td>`**
+
+Digunakan untuk membuat sel pada tabel yang berisi data tanggal ditambahkan.
+
+**`$buku['tanggal_ditambahkan']`**
+
+Mengambil nilai `tanggal_ditambahkan` dari data buku yang diperoleh dari database.
+
+**`strtotime($buku['tanggal_ditambahkan'])`**
+
+Mengubah nilai tanggal dari database menjadi format waktu yang dapat diproses oleh PHP.
+
+**`date('d-m-Y H:i', ...)`**
+
+Mengubah format tanggal dan waktu agar lebih mudah dibaca. Format yang digunakan adalah tanggal-bulan-tahun dan jam:menit.
+
+### Perubahan `proses_tambah.php`
+
+File `buku/proses_tambah.php` tidak perlu mengisi `tanggal_ditambahkan` secara manual. Proses `INSERT` tetap memasukkan data judul, pengarang, tahun, ISBN, stok, dan kategori. Karena kolom `tanggal_ditambahkan` memiliki `DEFAULT NOW()`, PostgreSQL akan mengisi tanggal dan waktu secara otomatis ketika buku ditambahkan.
+
+### Hasil
+
+Setelah query berhasil dijalankan, PostgreSQL menampilkan pesan **"Query returned successfully"**, sehingga kolom `tanggal_ditambahkan` berhasil ditambahkan ke tabel `buku`.
+
+Pada halaman **Daftar Buku**, sekarang terdapat kolom baru:
+
+**Judul | Pengarang | Tahun | Stok | Tanggal Ditambahkan | Aksi**
+
+Setiap buku yang ditambahkan akan memiliki tanggal dan waktu penambahan secara otomatis.

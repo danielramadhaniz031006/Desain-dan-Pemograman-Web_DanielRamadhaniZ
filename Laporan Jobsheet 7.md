@@ -23,6 +23,8 @@ Menambahkan validasi ISBN di `buku/proses_tambah.php` untuk memastikan bahwa ISB
 
 ```php
 if ($isbn !== '' && !preg_match('/^[0-9-]+$/', $isbn)) {
+    $errors[] = "ISBN hanya boleh berisi angka dan tanda hubung (-).";
+}
 ```
 
 Baris ini digunakan untuk memeriksa apakah ISBN yang dimasukkan tidak kosong dan tidak sesuai dengan format yang ditentukan.
@@ -58,25 +60,15 @@ Baris ini digunakan untuk mengecek apakah array `$errors` berisi pesan kesalahan
 
 ```php
 $_SESSION['flash'] = [
+    'type' => 'error',
+    'pesan' => implode(' ', $errors)
+];
 ```
 
 Baris ini digunakan untuk menyimpan informasi pesan error ke dalam session PHP dengan nama `flash`.
 
-```php
-'type' => 'error',
-```
-
-Menentukan bahwa jenis pesan yang disimpan adalah **error**.
-
-```php
-'pesan' => implode(' ', $errors)
-```
-
-Digunakan untuk menggabungkan semua pesan yang terdapat dalam array `$errors` menjadi satu teks.
-
-- `implode()` → menggabungkan isi array.
-- `' '` → digunakan sebagai pemisah antar pesan.
-- `$errors` → array yang berisi pesan kesalahan.
+- `'type' => 'error'` → menentukan bahwa jenis pesan yang disimpan adalah **error**.
+- `'pesan' => implode(' ', $errors)` → menggabungkan semua pesan yang terdapat dalam array `$errors` menjadi satu teks.
 
 #### 5. Mengarahkan Kembali ke Halaman Tambah Buku
 
@@ -143,27 +135,15 @@ foreach ($_SESSION['anggota'] as $anggota) {
 
 ```php
 $nama = trim($_POST['nama'] ?? '');
-```
-
-Mengambil data nama dari form. `trim()` menghapus spasi di awal dan akhir, sedangkan `?? ''` memberi nilai kosong jika data belum dikirim.
-
-```php
 $noAnggota = trim($_POST['no_anggota'] ?? '');
-```
-
-Mengambil nomor anggota dari form dan membersihkan spasi.
-
-```php
 $alamat = trim($_POST['alamat'] ?? '');
-```
-
-Mengambil alamat anggota dan membersihkan spasi.
-
-```php
 $noHp = trim($_POST['no_hp'] ?? '');
 ```
 
-Mengambil nomor HP anggota dan membersihkan spasi.
+Mengambil data dari form menggunakan `$_POST`.
+
+- `trim()` → menghapus spasi di awal dan akhir.
+- `?? ''` → memberikan nilai kosong jika data belum dikirim.
 
 #### 2. Menyiapkan Tempat untuk Error
 
@@ -259,33 +239,17 @@ Menghentikan perulangan karena nomor duplikat sudah ditemukan.
 
 ```php
 if (!empty($errors)) {
+    $_SESSION['flash'] = [
+        'type' => 'error',
+        'pesan' => implode(' ', $errors)
+    ];
+
+    header('Location: tambah.php');
+    exit;
+}
 ```
 
-Mengecek apakah terdapat pesan error di `$errors`.
-
-```php
-$_SESSION['flash'] = [
-    'type' => 'error',
-    'pesan' => implode(' ', $errors)
-];
-```
-
-Menyimpan pesan error ke session agar dapat ditampilkan di halaman `tambah.php`.
-
-- `'type' => 'error'` → menentukan bahwa jenis pesan adalah error.
-- `implode(' ', $errors)` → menggabungkan semua pesan error menjadi satu kalimat.
-
-```php
-header('Location: tambah.php');
-```
-
-Mengembalikan pengguna ke halaman tambah anggota.
-
-```php
-exit;
-```
-
-Menghentikan proses PHP agar data yang salah tidak disimpan.
+Digunakan untuk menyimpan pesan error ke session, mengarahkan pengguna kembali ke halaman `tambah.php`, dan menghentikan proses PHP agar data yang salah tidak disimpan.
 
 #### 9. Menyimpan Data Anggota
 
@@ -370,7 +334,6 @@ foreach ($_SESSION['anggota'] as $anggota) {
 ![Hasil No Anggota Duplikat](https://github.com/user-attachments/assets/be8b4cbf-6f0a-4e59-8daa-29d642bb58b4)
 
 ---
-
 
 - Sistem menggunakan **flash message** untuk menampilkan pesan error maupun pesan berhasil.
 - Data yang tidak valid tidak akan disimpan dan pengguna akan diarahkan kembali ke halaman form.

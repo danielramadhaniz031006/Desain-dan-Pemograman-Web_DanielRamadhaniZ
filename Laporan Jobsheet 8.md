@@ -12,7 +12,6 @@
 1.Tangani error UNIQUE dengan rapi — bungkus $stmt->execute(...) di anggota/proses_tambah.php dengan try/catch (PDOException $e), lalu set $_SESSION['flash'] berisi pesan seperti "No. Anggota sudah dipakai, gunakan nomor lain." alih-alih membiarkan error mentah ditampilkan ke pengguna.
 
 Kode :
-```php
 try {
     $stmt->execute([
         'nama' => $nama,

@@ -373,3 +373,43 @@ session_start();
 ### Hasil
 
 <img width="638" height="542" alt="image" src="https://github.com/user-attachments/assets/1de26dd7-e756-44b2-8cb4-77a01b52d675" />
+
+---
+
+## 4. Reset Data Session
+
+Menambahkan tombol **Reset Data** untuk menghapus seluruh data session secara manual menggunakan fungsi `session_destroy()`. Fitur ini digunakan untuk mengosongkan data `$_SESSION` tanpa perlu menutup browser.
+
+### 1. Tombol Reset Data pada `index.php`
+
+```php
+<section>
+    <h2>Pengaturan Data</h2>
+
+    <form method="post" action="reset_session.php">
+        <button type="submit">Reset Data</button>
+    </form>
+</section>
+```
+
+### 2. Proses Reset pada `reset_session.php`
+
+```php
+<?php
+session_start();
+
+session_destroy();
+
+header('Location: buku/list.php');
+exit;
+```
+
+### Penjelasan
+
+- `session_start();` digunakan untuk memulai atau mengakses session PHP.
+- `session_destroy();` digunakan untuk menghancurkan data session yang sedang aktif.
+- `header('Location: buku/list.php');` mengarahkan pengguna ke halaman Daftar Buku setelah proses reset selesai.
+- `exit;` menghentikan proses PHP setelah melakukan pengalihan halaman.
+- Tombol `Reset Data` pada `index.php` mengirimkan request ke `reset_session.php` menggunakan method `POST`.
+
+### Hasil

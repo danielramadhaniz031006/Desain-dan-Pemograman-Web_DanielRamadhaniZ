@@ -371,14 +371,6 @@ foreach ($_SESSION['anggota'] as $anggota) {
 
 ---
 
-## Kesimpulan
 
-Pada tugas ini telah ditambahkan beberapa validasi tambahan pada proses input data.
-
-Validasi yang ditambahkan meliputi:
-
-- ISBN hanya boleh berisi angka dan tanda hubung (`-`).
-- Nomor HP hanya boleh berisi angka.
-- Nomor anggota tidak boleh sama dengan nomor anggota yang sudah terdaftar.
 - Sistem menggunakan **flash message** untuk menampilkan pesan error maupun pesan berhasil.
 - Data yang tidak valid tidak akan disimpan dan pengguna akan diarahkan kembali ke halaman form.

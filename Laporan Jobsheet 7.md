@@ -378,7 +378,7 @@ session_start();
 
 ## 4. Reset Data Session
 
-Menambahkan tombol **Reset Data** untuk menghapus seluruh data session secara manual menggunakan fungsi `session_destroy()`. Fitur ini digunakan untuk mengosongkan data `$_SESSION` tanpa perlu menutup browser.
+Tambah tombol "Reset Data" yang memanggil session_destroy() untuk mengosongkan seluruh $_SESSION secara manual, tanpa perlu menutup browser — cari tahu sendiri lewat dokumentasi PHP resmi bagaimana fungsi ini bekerja.
 
 ### 1. Tombol Reset Data pada `index.php`
 
@@ -413,3 +413,5 @@ exit;
 - Tombol `Reset Data` pada `index.php` mengirimkan request ke `reset_session.php` menggunakan method `POST`.
 
 ### Hasil
+
+<img width="1157" height="777" alt="image" src="https://github.com/user-attachments/assets/023e5d38-c9c4-46d2-8d77-9b7ee722978a" />
